@@ -53,17 +53,6 @@
 	</dependencies>
 
 	<build>
-		<finalName>${project.artifactId}</finalName>
-		<resources>
-			<resource>
-				<directory>src/main/resources</directory>
-				<filtering>false</filtering>
-			</resource>
-			<resource>
-				<directory>src/main/resources.${build.profile.id}</directory>
-				<filtering>false</filtering>
-			</resource>
-		</resources>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -77,14 +66,12 @@
 		<profile>
 			<id>dev</id>
 			<properties>
-				<build.profile.id>dev</build.profile.id>
 				<spring.profiles.active>dev</spring.profiles.active>
 			</properties>
 		</profile>
 		<profile>
 			<id>prod</id>
 			<properties>
-				<build.profile.id>prod</build.profile.id>
 				<spring.profiles.active>prod</spring.profiles.active>
 			</properties>
 		</profile>
